@@ -108,10 +108,6 @@ const VocabSection = () => {
                                     onChange={(e) => setMeaning(e.target.value)}
                                 />
                             </td>
-                            {/* <td>
-                                <button><LiaEditSolid /></button>
-                                <button><TiDeleteOutline /></button>
-                            </td> */}
                         </tr>
                     </tbody>
                 </table>

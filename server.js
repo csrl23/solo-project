@@ -44,13 +44,16 @@ app.post('/verbs', controller.addVerb, (req, res) =>
     res.status(201).json(res.locals.newVerb)
 ); 
 
+
 app.delete('/verbs/:verb', controller.deleteVerb, (req, res) => 
     res.sendStatus(204)
 ); 
 
+
 app.get('/vocabs', controller.sendVocabs, (req, res) => 
     res.status(200).json({vocabs: res.locals.sendVocabs})
 ); 
+
 
 app.post('/vocabs', controller.addVocab, (req, res) => 
     res.status(201).json(res.locals.newVocab)

@@ -18,9 +18,6 @@ const grammarSchema = mongoose.Schema({
 }); 
 
 
-// module.exports = mongoose.model('Verb', verbSchema); 
-// module.exports = mongoose.model('Vocab', vocabSchema); 
-// module.exports = mongoose.model('Grammar Rules', grammarSchema); 
 
 module.exports = {
     Verb: mongoose.model('Verb', verbSchema), 
