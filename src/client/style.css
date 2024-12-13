@@ -1,0 +1,181 @@
+/* overall styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Montserrat", serif; 
+}
+
+html {
+    background: radial-gradient(#c875fc, #f5e8fc);
+    background-repeat: no-repeat;
+    min-height: 100%; 
+}
+
+/*& App styling */
+/* header styling */
+.app-name {
+    color: white; 
+    font-weight: 550;
+    font-size: 3.5em;
+    padding: 0.5em 0.5em 0.5em 0.5em; 
+}
+
+/* main styling */
+.notebook-lang {
+    color: white; 
+    font-weight: 550; 
+    font-size: 2.25em;
+    text-align: center;
+}
+
+.field {
+    background-color: white; 
+    border: 0.1em solid rgb(222, 195, 255); 
+    border-radius: 1em; 
+    padding: 3em 3em; 
+    margin: 1.5em 1.5em; 
+}
+
+/*& MainSection styling */
+.mainSection {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 1em 3em; 
+    grid-template-areas: 
+        "Verb Grammar"
+        "Vocab Grammar"; 
+}
+
+.component1 {
+    grid-area: Verb;
+}
+
+.component2 {
+    grid-area: Vocab;
+}
+
+.component3 {
+    grid-area: Grammar;
+}
+
+@media (max-width: 900px) {
+    .mainSection {
+        display: flex;
+        flex-direction: column;
+        gap: 12px; 
+    }
+}
+/* table components styling */
+.verbTable, .vocabTable, .grammarNote {
+    background-color: #f9f1ff;
+    border: 0.1em solid rgb(231, 215, 252); 
+    border-radius: 0.5em; 
+    padding: 0.5em 0.5em 0.5em 0.5em; 
+    max-width: 100%;
+    display: flex; 
+    flex-direction: column;
+    align-items: center;
+}
+
+.actualVerbTable,.actualVocabTable {
+    margin: 0.5em 0em 0em 0em; 
+}
+
+.verbTitles, .vocabTitles {
+    font-weight: 550; 
+    font-size: 1em;
+    text-align: center;
+    color: rgb(67, 66, 66); 
+    padding: 0em 0em 0.25em 0em; 
+}
+
+.verbh2, .vocabh2, .grammarh2 {
+    font-weight: 550; 
+    font-size: 1.7em;
+    margin: 0em 0em 0.4em 0em; 
+    color: rgb(67, 66, 66); 
+}
+
+.verbBox, .vocabBox, .lexCatBox, .lexCatDrop, .meaningBox {
+    background-color: #ffffff;
+    border: 0.1em solid rgb(237, 222, 255); 
+    height: 3em;
+    /* width: 100%;  */
+    border-radius: 0.5em; 
+    text-align: center;
+    color: rgb(67, 66, 66); 
+}
+
+.verbBox, .vocabBox, .lexCatBox {
+    padding: 0em 1em; 
+}
+
+.lexCatDrop {
+    padding: 0em 2em; 
+}
+
+.meaningBox {
+    padding: 0em 2em; 
+}
+
+.buttonBox {
+    border: 0em; 
+    margin: 0em 0.5em; 
+    padding: 0em 1em; 
+    text-align: center;
+}
+
+.add-button {
+    border: 0.1em solid rgb(231, 215, 252); 
+    border-radius: 0.5em; 
+    padding: 0.5em 0.5em; 
+    margin: 0.8em 0em 0.8em 0em; 
+}
+
+.add-button:hover {
+    background-color: rgb(245, 219, 255);
+}
+
+.edit-button, .delete-button {
+    background-color: #ffffff00;
+    color: rgb(60, 60, 60);
+    border: 0em; 
+    font-size: 1.5em;
+}
+
+.delete-button {
+    color: red;
+}
+
+.edit-button:hover, .delete-button:hover {
+    transform: scale(0.85); 
+}
+
+.textarea {
+    padding: 1em 1.5em; 
+    height: 39.5em; 
+    width: 100%; 
+    border: 0.1em solid rgb(231, 215, 252); 
+    border-radius: 0.5em; 
+    background-image: radial-gradient(rgb(157, 156, 156) 1px, transparent 0);
+    background-size: 30px 30px;
+    /* background-position: -19px -19px; */
+    line-height: 1.7em;
+    font-size: 1.1em;
+    color: rgb(67, 66, 66); 
+}
+
+/* footer styling */
+.footer-p {
+    color: white; 
+    /* font-family: "Montserrat", serif; */
+    font-weight: 400; 
+    font-size: 1em;
+    text-align: center;
+}
+
+.footer {
+    margin: 1em 0em 1em 0em; 
+}

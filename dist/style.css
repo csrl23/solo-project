@@ -1,0 +1,99 @@
+/* overall styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Montserrat", serif; 
+}
+
+html {
+    background: radial-gradient(#c875fc, #f5e8fc);
+    background-repeat: no-repeat;
+    min-height: 100%; 
+}
+
+/* header styling */
+.app-name {
+    color: white; 
+    font-weight: 550;
+    font-size: 3.5em;
+    padding: 0.5em 0.5em 0.5em 0.5em; 
+}
+
+/* main section styling */
+.notebook-lang {
+    color: white; 
+    font-weight: 550; 
+    font-size: 2.25em;
+    text-align: center;
+}
+
+.field {
+    background-color: white; 
+    border: 0.1em solid rgb(222, 195, 255); 
+    border-radius: 1em; 
+    padding: 15em 10em; 
+    margin: 1.5em 1.5em; 
+}
+
+/* table components styling */
+.verbTable, .vocabTable {
+    background-color: #f9f1ff;
+    border: 0.1em solid rgb(231, 215, 252); 
+    border-radius: 0.5em; 
+    padding: 0.5em 0.5em 0.5em 0.5em; 
+    max-width: 100%;
+    display: flex; 
+    flex-direction: column;
+    align-items: center;
+}
+
+.verbTitles, .vocabTitles {
+    font-weight: 550; 
+    font-size: 1em;
+    text-align: center;
+    color: rgb(67, 66, 66); 
+}
+
+.verbh2, .vocabh2 {
+    font-weight: 550; 
+    font-size: 1.7em;
+    margin: 0em 0em 0.4em 0em; 
+    /* text-align: center; */
+    color: rgb(67, 66, 66); 
+}
+
+.verbBox, .vocabBox, .lexCatBox, .lexCatDrop, .meaningBox {
+    background-color: #ffffff;
+    border: 0.1em solid rgb(237, 222, 255); 
+    height: 3em;
+    width: 100%; 
+    border-radius: 0.5em; 
+    margin: 0em 0.5em; 
+    text-align: center;
+    color: rgb(67, 66, 66); 
+}
+
+.add-button {
+    border: 0.1em solid rgb(231, 215, 252); 
+    border-radius: 0.5em; 
+    padding: 0.5em 0.5em; 
+    margin: 0.8em 0em 0.3em 0em; 
+}
+
+.add-button:hover {
+    background-color: rgb(245, 219, 255);
+}
+
+/* footer styling */
+.footer-p {
+    color: white; 
+    /* font-family: "Montserrat", serif; */
+    font-weight: 400; 
+    font-size: 1em;
+    text-align: center;
+}
+
+.footer {
+    margin: 1em 0em 1em 0em; 
+}
