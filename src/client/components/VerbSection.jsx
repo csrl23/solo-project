@@ -12,10 +12,12 @@ const VerbSection = () => {
 
     // renders verbs already in database on intial load 
     useEffect(() => {
+        // send get request to database to display current verbs in db
         const getVerbs = fetch('/verbs')
         .then(res => res.json())
         .then(data => {
             // console.log('This is the stringified res data object:', data.verbs); 
+            // with the returned verbs in the data obj, set new slice of state
             setData([...data.verbs])
         })
         .catch(err => {
@@ -23,10 +25,15 @@ const VerbSection = () => {
         }); 
     }, []); 
 
+
+    // function to send post requests to db with newly added verb + meaning 
     const postVerbFunc = () => {
+        /* first, check if either the verb or meaning state variables are falsy (empty string - 
+        meaning their state was not set properly when they were entered in the input field) */
         if (!!verb || !!meaning) {
         // useEffect hook not working, error message: hook must be inside of a function??
         // useEffect(() => {
+            // send post request to add verb + meaning to the db 
             const postVerbs = fetch('/verbs', {
               method: 'POST', 
               headers: {
@@ -35,6 +42,7 @@ const VerbSection = () => {
               body: JSON.stringify({ verb, meaning }), 
             })
             .then((res) => {
+              // no data is returned, console log to verify if the response is ok 
               if (!res.ok) {
                 console.log('The response was not ok. This is the res object:', res);
               } else {
@@ -45,22 +53,25 @@ const VerbSection = () => {
               console.error('Request failed:', err); 
             }); 
         // }, []); 
+            //invoke addRowFunc to add verb + meaning row to the table 
             addRowFunc(); 
         }
     }; 
 
+
     const elementRef = useRef([]); 
 
+    // function to delete verb + meaning from db 
     const deleteVerbFunc = (rowKey) => {
-        console.log('This is the rowKey:', rowKey); 
+        // console.log('This is the rowKey:', rowKey); 
         const foundVerbElement = document.getElementById(`verb-${rowKey}`); 
-        console.log('The found verb element begins here:', foundVerbElement); 
+        // console.log('The found verb element begins here:', foundVerbElement); 
         const index = rowKey; 
 
         const element = elementRef.current[index]; 
         if (element) {
           const verbText = element.textContent; 
-          console.log('The found verb begins here:', verbText)
+          // console.log('The found verb begins here:', verbText)
 
           fetch(`/verbs/${verbText}`, {
             method: 'DELETE'
